@@ -15,8 +15,8 @@ def dataframe2arff(dataframe, filename, coltypes, relation, include_index=False)
                 f.write('@attribute {} string\n'.format(column))
             elif attrtype == 'nominal':
                 levels = dataframe[column].unique()
-                set_notation = '{' + ','.join(levels) + '}'
-                f.write('@attribute {} {}'.format(set_notation))
+                set_notation = '{' + ','.join(map(str, levels)) + '}'
+                f.write('@attribute {} {}'.format(column, set_notation))
             else:
                 pass
                 # TODO raise a stink
