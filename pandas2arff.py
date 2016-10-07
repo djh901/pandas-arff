@@ -16,11 +16,11 @@ def dataframe2arff(dataframe, filename, coltypes, relation, include_index=False)
             elif attrtype == 'nominal':
                 levels = dataframe[column].unique()
                 set_notation = '{' + ','.join(map(str, levels)) + '}'
-                f.write('@attribute {} {}'.format(column, set_notation))
+                f.write('@attribute {} {}\n'.format(column, set_notation))
             else:
                 pass
                 # TODO raise a stink
 
         f.write('@data\n')
-        dataframe.to_csv(f, header=False)
+        dataframe.to_csv(f, header=False, index=False)
 
