@@ -1,4 +1,4 @@
-# pandas2arff
+# pandas-arff
 
 ## Overview
 
@@ -9,14 +9,14 @@ Function for outputting a pandas dataframe in ARFF format.
 Clone this repository into your project.
 
 ```
-git clone https://www.github.com/djh901/pandas2arff
+git clone https://www.github.com/djh901/pandas-arff parff
 ```
 
 Import the pandas2arff module in your Python code and call the dataframe2arff function with your dataframe.
 ```
-import pandas2arff
+import parff
 
 ...
 
-pandas2arff.dataframe2arff(df, filename, coltypes, relation)
+parff.dataframe2arff(df, filename, coltypes, relation)
 ```

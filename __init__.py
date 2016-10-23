@@ -1,1 +1,1 @@
-from pandas2arff import *
+from arff_io import *
