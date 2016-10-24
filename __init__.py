@@ -1,1 +1,1 @@
-from arff_io import *
+from .arff_io import *
