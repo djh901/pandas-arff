@@ -25,7 +25,7 @@ def dataframe2arff(dataframe, filename, coltypes, relation, include_index=False)
         dataframe.to_csv(f, header=False, index=False)
 
 import pandas
-import io
+import StringIO as io
 import re
 relation = r'@relation (?P<relation>[^\n]+)'
 attribute = r'@attribute (?P<attribute>[^\n]+)'
